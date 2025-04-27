@@ -109,7 +109,7 @@
 <li><strong>确定版本号及主机信息</strong></li>
 </ol>
 <p>确认版本号</p>
-<p><img src="/uboot%E8%AF%A6%E8%A7%A3/WEBRESOURCE09c99c7c7f784797be79b42f295eeb05image.png"></p>
+<p><img src="/uboot%E8%AF%A6%E8%A7%A3/WEBRESOURCE09c99c7c7f784797be79b42f295eeb05image.png" alt="WEBRESOURCE09c99c7c7f784797be79b42f295eeb05image.png"></p>
 <p><img src="/uboot%E8%AF%A6%E8%A7%A3/WEBRESOURCEdfcb019518b24ccf9a164b7a0b2a142eimage.png"></p>
 <p>获取cpu架构 和 os</p>
 <p>makefile的函数调用与变量调用很类似，格式是$( function arguments)，其实上面一大段的意思是变量HOSTARCH的值是一个函数的返回值shell是makefile中的一个函数，$(shell XXX)会被解析成执行shell命令XXX；此处是执行了一条 uname -m |sed -e ……，符号 \是makefile的换行符其中，|是shell语法中的管道结构，例如：XXX | YYY ，表达式XXX 的输出将作为表达式YYY的输入，YYY的输出才是整句表达式的输出uname -m 指令将输出负责编译的主机cpu架构，比如ixx86；sed -e是替换命令，比如把ixx86替换为i386,由此可见这个HOSTARCH变量的值将得到负责编译的主机cpu架构。大部分情况下我们得到的都是i386</p>

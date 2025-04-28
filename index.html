@@ -100,8 +100,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文参考csdn 对海思3521a对uboot 2010.06的分析</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在rk平台上 uboot的适配已经非常完善，基本不需要开发人员进行二次开发</p>
+<p>但是如海思，fulhan此类，需要用到tftp烧录和flash的平台，需要在uboot里面修改bootarg</p>
+<p>bootcmd,还需要移植phy的驱动等，如果只有一个mac对接的swith，甚至需要移植交换机的驱动</p>
+<p>深入学习uboot还是很有必要的，以下为我个人对uboot 的学习笔记，主要参考各路大神，</p>
+<p>让自己对uboot不只是停留在表面，而是结合arm架构对uboot有一个更深刻的认识</p>
+<p>本文参考csdn 对海思3521a对uboot 2010.06的分析</p>
 <p><a target="_blank" rel="noopener" href="https://caibiao-lee.blog.csdn.net/article/details/103239130">https://caibiao-lee.blog.csdn.net/article/details/103239130</a></p>
+<p>以及以及知乎博主等等</p>
 <p>对fulhan为平台使用的 2017.09 uboot进行分析，以便于更深刻的理解uboot的启动流程和dm驱动框架</p>
 <p>个人学习笔记。</p>
 <h1 id="1-顶层makefile"><a href="#1-顶层makefile" class="headerlink" title="1.顶层makefile"></a>1.顶层makefile</h1><p>主要功能：</p>
